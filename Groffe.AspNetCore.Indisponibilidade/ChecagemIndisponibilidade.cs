@@ -33,8 +33,8 @@ namespace Groffe.AspNetCore.Indisponibilidade
                 sqlCommand.Append("TOP 1 ");
             sqlCommand.Append("Mensagem FROM Indisponibilidade ");
             sqlCommand.Append("WHERE @DataProcessamento BETWEEN InicioIndisponibilidade ");
-            sqlCommand.Append("AND InicioIndisponibilidade "); // Simulação de falha
-            //sqlCommand.Append("AND TerminoIndisponibilidade ");
+            //sqlCommand.Append("AND InicioIndisponibilidade "); // SimulaÃ§Ã£o de falha
+            sqlCommand.Append("AND TerminoIndisponibilidade ");
             sqlCommand.Append("ORDER BY InicioIndisponibilidade ");
             if (config.Database == DBChecagemIndisponibilidade.SQLite)
                 sqlCommand.Append("LIMIT 1 ");
